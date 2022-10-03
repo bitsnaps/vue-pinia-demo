@@ -23,4 +23,19 @@ export const useProductStore = defineStore("ProductStore", {
         }
     },
     // getters
+    getters: {
+        // count(): number {
+        //     return this.products?.length
+        // },
+        // You can use one-line function by referencing "this" with "state"
+        count: (state): number => state.products?.length,
+        total(): number {
+            let t = 0
+            this.products.forEach( (p) => t += p.price )
+            return t
+        },
+        isEmpty(): boolean {
+            return this.count === 0
+        }
+    }
 })

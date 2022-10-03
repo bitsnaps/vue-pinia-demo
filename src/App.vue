@@ -19,7 +19,7 @@ productStore.fill()
       {{ p.name }} for ${{ p.price }}
     </li>
   </ul>
-  <p>Nbr of Products: {{ productStore.products.length }}</p>
+  <p>Nbr of Products: {{ productStore.count }} with total = ${{ productStore.total }}</p>
 
 </template>
 
